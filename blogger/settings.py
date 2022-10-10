@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-
+import django_heroku 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kt%y1n#rsecek4hr&11k8tc(d7#y88olkvf4oqi3$t75#dos0='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['friendlyblogger.herokuapp.com']
 
@@ -76,6 +76,11 @@ WSGI_APPLICATION = 'blogger.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'newdb',
+        # 'USER':'root',
+        # 'PASSWORD':'Admin@123',
+        # 'HOST':'localhost'
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd5m4ckfgsiuumf',
         'USER':'yekxagojxbfbam',
@@ -124,7 +129,6 @@ USE_TZ = True
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
 django_heroku.settings(locals())
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

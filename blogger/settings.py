@@ -81,7 +81,7 @@ DATABASES = {
         # 'USER':'root',
         # 'PASSWORD':'Admin@123',
         # 'HOST':'localhost'
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd5m4ckfgsiuumf',
         'USER':'yekxagojxbfbam',
         'PASSWORD':'4abeb003fbe3ee53cc23107f77eb6f408291e95d4ebc7e0aec5183e887d0472f',

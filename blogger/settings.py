@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kt%y1n#rsecek4hr&11k8tc(d7#y88olkvf4oqi3$t75#dos0=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['friendlyblogger.herokuapp.com']
 
 
 # Application definition
@@ -77,10 +77,11 @@ WSGI_APPLICATION = 'blogger.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'newdb',
-        'USER':'postgres',
-        'PASSWORD':12345,
-        'HOST':'localhost'
+        'NAME': 'd5m4ckfgsiuumf',
+        'USER':'yekxagojxbfbam',
+        'PASSWORD':'4abeb003fbe3ee53cc23107f77eb6f408291e95d4ebc7e0aec5183e887d0472f',
+        'HOST':'ec2-54-147-36-107.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
@@ -119,7 +120,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
+django_heroku.settings(locals())
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
